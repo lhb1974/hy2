@@ -221,7 +221,7 @@ inst_pwd(){
 }
 
 inst_site(){
-    read -rp "请输入 Hysteria 2 的伪装网站地址 （去除https://） [回车必应网站]：" proxysite
+    read -rp "请输入 Hysteria 2 的伪装网站地址 （去除https://）${GREEN} [回车必应网站]：" proxysite
     [[ -z $proxysite ]] && proxysite="www.bing.com"
     yellow "使用在 Hysteria 2 节点的伪装网站为：$proxysite"
 }
