@@ -269,10 +269,10 @@ tls:
   key: $key_path
 
 quic:
-  initStreamReceiveWindow: 26843545 
-  maxStreamReceiveWindow: 26843545 
-  initConnReceiveWindow: 67108864 
-  maxConnReceiveWindow: 67108864
+  initStreamReceiveWindow: 8388608 
+  maxStreamReceiveWindow: 8388608 
+  initConnReceiveWindow: 20971520 
+  maxConnReceiveWindow: 20971520
 
 bandwidth: 
   up: 0 gbps
@@ -314,17 +314,13 @@ tls:
   insecure: true
 
 quic:
-  initStreamReceiveWindow: 26843545 
-  maxStreamReceiveWindow: 26843545 
-  initConnReceiveWindow: 67108864 
-  maxConnReceiveWindow: 67108864
+  initStreamReceiveWindow: 8388608 
+  maxStreamReceiveWindow: 8388608 
+  initConnReceiveWindow: 20971520 
+  maxConnReceiveWindow: 20971520
   
 fastOpen: true
 
-bandwidth:
-  up: 100 mbps
-  down: 500 mbps
-  
 socks5:
   listen: 127.0.0.1:5080
 
@@ -341,14 +337,10 @@ EOF
     "insecure": true
   },
   "quic": {
-    "initStreamReceiveWindow": 26843545,
-    "maxStreamReceiveWindow": 26843545,
-    "initConnReceiveWindow": 67108864,
-    "maxConnReceiveWindow": 67108864
-  },
-    "bandwidth": {
-    "up": "100 mbps",
-    "down": "500 mbps"
+    "initStreamReceiveWindow": 8388608,
+    "maxStreamReceiveWindow": 8388608,
+    "initConnReceiveWindow": 20971520,
+    "maxConnReceiveWindow": 20971520
   },
   "fastOpen": true,
   "socks5": {
