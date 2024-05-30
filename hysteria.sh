@@ -269,14 +269,16 @@ tls:
   key: $key_path
 
 quic:
-  initStreamReceiveWindow: 16777216
-  maxStreamReceiveWindow: 16777216
-  initConnReceiveWindow: 33554432
-  maxConnReceiveWindow: 33554432
-
-bandwidth: 
-  up: 0 gbps
-  down: 0 gbps
+  initStreamReceiveWindow: 8388608
+  maxStreamReceiveWindow: 8388608
+  initConnReceiveWindow: 20971520
+  maxConnReceiveWindow: 20971520
+  maxIdleTimeout: 30s
+  maxIncomingStreams: 1024
+  disablePathMTUDiscovery: false
+  
+disableUDP: false
+udpIdleTimeout: 60s
 
 auth:
   type: password
@@ -314,12 +316,20 @@ tls:
   insecure: true
 
 quic:
-  initStreamReceiveWindow: 16777216
-  maxStreamReceiveWindow: 16777216
-  initConnReceiveWindow: 33554432
-  maxConnReceiveWindow: 33554432
-  
+  initStreamReceiveWindow: 8388608
+  maxStreamReceiveWindow: 8388608
+  initConnReceiveWindow: 20971520
+  maxConnReceiveWindow: 20971520
+  maxIdleTimeout: 30s
+  keepAlivePeriod: 10s
+  disablePathMTUDiscovery: false
+
+bandwidth:
+  up: 100 mbps
+  down: 1000 mbps
+
 fastOpen: true
+lazy: true
 
 socks5:
   listen: 127.0.0.1:5080
@@ -337,12 +347,20 @@ EOF
     "insecure": true
   },
   "quic": {
-    "initStreamReceiveWindow": 16777216,
-    "maxStreamReceiveWindow": 16777216,
-    "initConnReceiveWindow": 33554432,
-    "maxConnReceiveWindow": 33554432
+    "initStreamReceiveWindow": 8388608,
+    "maxStreamReceiveWindow": 8388608,
+    "initConnReceiveWindow": 20971520,
+    "maxConnReceiveWindow": 20971520,
+    "maxIdleTimeout": "30s",
+    "keepAlivePeriod": "10s",
+    "disablePathMTUDiscovery": false
+  },
+  "bandwidth": {
+    "up": "100 mbps",
+    "down": "1000 mbps"
   },
   "fastOpen": true,
+  "lazy": true,
   "socks5": {
     "listen": "127.0.0.1:5080"
   },
