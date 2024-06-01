@@ -268,6 +268,11 @@ tls:
   cert: $cert_path
   key: $key_path
 
+obfs:
+  type: salamander
+  salamander:
+    password: Cry_Me_a*g0
+
 quic:
   initStreamReceiveWindow: 8388608
   maxStreamReceiveWindow: 8388608
@@ -315,6 +320,11 @@ tls:
   sni: $hy_domain
   insecure: true
 
+obfs:
+  type: salamander
+  salamander:
+    password: Cry_Me_a*g0
+
 quic:
   initStreamReceiveWindow: 8388608
   maxStreamReceiveWindow: 8388608
@@ -325,8 +335,8 @@ quic:
   disablePathMTUDiscovery: false
 
 bandwidth:
-  up: 100 mbps
-  down: 1000 mbps
+  up: 0 mbps
+  down: 0 mbps
 
 fastOpen: true
 lazy: true
@@ -346,6 +356,12 @@ EOF
     "sni": "$hy_domain",
     "insecure": true
   },
+  "obfs": {
+    "type": "salamander",
+    "salamander": {
+      "password": "Cry_Me_a*g0"
+    }
+  },
   "quic": {
     "initStreamReceiveWindow": 8388608,
     "maxStreamReceiveWindow": 8388608,
@@ -356,8 +372,8 @@ EOF
     "disablePathMTUDiscovery": false
   },
   "bandwidth": {
-    "up": "100 mbps",
-    "down": "1000 mbps"
+    "up": "0 mbps",
+    "down": "0 mbps"
   },
   "fastOpen": true,
   "lazy": true,
