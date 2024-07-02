@@ -268,11 +268,6 @@ tls:
   cert: $cert_path
   key: $key_path
 
-obfs:
-  type: salamander
-  salamander:
-    password: Cry_Me_a*g0
-
 quic:
   initStreamReceiveWindow: 8388608
   maxStreamReceiveWindow: 8388608
@@ -320,11 +315,6 @@ tls:
   sni: $hy_domain
   insecure: true
 
-obfs:
-  type: salamander
-  salamander:
-    password: Cry_Me_a*g0
-
 quic:
   initStreamReceiveWindow: 8388608
   maxStreamReceiveWindow: 8388608
@@ -355,12 +345,6 @@ EOF
   "tls": {
     "sni": "$hy_domain",
     "insecure": true
-  },
-  "obfs": {
-    "type": "salamander",
-    "salamander": {
-      "password": "Cry_Me_a*g0"
-    }
   },
   "quic": {
     "initStreamReceiveWindow": 8388608,
