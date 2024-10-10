@@ -329,7 +329,6 @@ bandwidth:
   down: 0 mbps
 
 fastOpen: true
-lazy: true
 
 socks5:
   listen: 127.0.0.1:5080
@@ -360,7 +359,6 @@ EOF
     "down": "0 mbps"
   },
   "fastOpen": true,
-  "lazy": true,
   "socks5": {
     "listen": "127.0.0.1:5080"
   },
