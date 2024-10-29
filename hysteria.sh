@@ -276,11 +276,6 @@ quic:
   maxIdleTimeout: 30s
   maxIncomingStreams: 1024
   disablePathMTUDiscovery: false
-
-obfs:
-  type: salamander
-  salamander:
-    password: Cry_Me_a*g0
     
 disableUDP: false
 udpIdleTimeout: 60s
@@ -329,11 +324,6 @@ quic:
   keepAlivePeriod: 10s
   disablePathMTUDiscovery: false
 
-obfs:
-  type: salamander
-  salamander:
-    password: Cry_Me_a*g0
-
 bandwidth:
   up: 0 mbps
   down: 0 mbps
@@ -363,11 +353,6 @@ EOF
     "maxIdleTimeout": "30s",
     "keepAlivePeriod": "10s",
     "disablePathMTUDiscovery": false
-  },
-  "obfs": {
-    "type": "salamander",
-    "salamander": {
-      "password": "Cry_Me_a*g0"
   },
   "bandwidth": {
     "up": "0 mbps",
